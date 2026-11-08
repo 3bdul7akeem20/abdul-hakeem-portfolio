@@ -1,7 +1,7 @@
 import { bySlug, site } from './site'
 
 // Change this when the public portfolio moves to a permanent domain.
-export const publicOrigin = 'https://site-f862bfa273d54b218d860d0b254b686e.freebuff.page'
+export const publicOrigin = 'https://3bdul7akeem20.github.io/abdul-hakeem-portfolio'
 
 export interface RouteMetadata {
   title: string

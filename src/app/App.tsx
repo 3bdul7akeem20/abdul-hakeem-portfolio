@@ -96,7 +96,7 @@ function Pages() {
 export function App() {
   return (
     <MotionConfig reducedMotion="user">
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <a
           href="#main"
           className="fixed left-4 top-4 z-[110] -translate-y-[200%] rounded-control bg-fg px-4 py-2.5 text-[14px] font-medium text-bg transition-transform focus:translate-y-0"
