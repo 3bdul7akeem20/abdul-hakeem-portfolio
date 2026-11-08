@@ -13,6 +13,16 @@ export function Footer() {
   const time = useLocalTime()
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const [draftPrepared, setDraftPrepared] = useState(false)
+  const [copyStatus, setCopyStatus] = useState('')
+
+  async function copyEmail() {
+    try {
+      await navigator.clipboard.writeText(site.email)
+      setCopyStatus('Email address copied.')
+    } catch {
+      setCopyStatus('Select the email address above and copy it manually.')
+    }
+  }
 
   function prepareEmail(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -53,6 +63,7 @@ export function Footer() {
                   <ArrowUpRight className="size-4" />
                 </a>
               </Magnetic>
+              <button type="button" onClick={copyEmail} className="min-h-11 px-2 text-sm underline">Copy email address</button>
               {site.socials.map((s) => (
                 <a
                   key={s.label}
@@ -67,6 +78,7 @@ export function Footer() {
               ))}
             </Reveal>
 
+            <p role="status" className="mt-2 text-sm text-muted">{copyStatus}</p>
             <Reveal delay={0.25} className="mt-12">
               <dl className="grid grid-cols-2 gap-x-6 gap-y-5 border-t border-line pt-6 text-[14px] sm:grid-cols-4 lg:grid-cols-2">
                 {[

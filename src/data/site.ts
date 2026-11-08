@@ -15,7 +15,7 @@ export const site = {
   notice: '30 days',
   focus: 'UAE and GCC',
   intro:
-    'I turn maintenance and business data into reporting teams can act on: Power BI and Excel dashboards, performance tracking, data checks and practical workflow automation. My experience spans client data operations at NielsenIQ and maintenance planning with IBM Maximo in Dubai.',
+    'I turn maintenance and business data into reporting teams can act on: Power BI and Excel dashboards, performance tracking, data checks and practical workflow automation. My experience spans client data operations at NielsenIQ and computer-aided facilities management (CAFM) planning with IBM Maximo in Dubai.',
   socials: [{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/abd7akeem' }],
   marquee: ['IBM Maximo', 'Power BI', 'Power Query', 'DAX', 'Advanced Excel', 'MIS reporting', 'KPI & SLA', 'PPM planning', 'Power Automate', 'Data quality'],
 }
@@ -108,13 +108,13 @@ export const projects: Project[] = [
     ],
     problem: [
       'Maximo exports arrive as flat tables. Date fields are stored in inconsistent formats, work type and workgroup need filtering before two periods are comparable, and a KPI view built on unfiltered data counts work that was never in scope.',
-      'Left in Excel, each report rebuilds those decisions slightly differently, and the difference between two reports becomes a conversation about the reporting rather than the operation.',
+      'When each report defines its own date conversions and filters, two views can count different work orders for the same period. A shared model lets each view use the same scope and KPI definitions.',
     ],
     contribution: [
       'Prepared work order and service request data for reporting.',
       'Cleaned and converted date fields so periods could be compared.',
       'Applied maintenance work type and workgroup filters to define scope.',
-      'Developed performance indicator, service-level, quality and backlog views for internal PRS reporting.',
+      'Developed performance indicator, service-level, quality and backlog views for internal contract performance reviews.',
       'Built reporting tables, matrices and summary cards for review.',
       'Monitored work order creation and completion activity.',
       'Kept reporting calculations consistent across views.',
@@ -141,11 +141,11 @@ export const projects: Project[] = [
       'A Flask application that captures preventive maintenance checklists digitally and generates a structured PDF record — job plan, technician, timings, responses, remarks, signature and images.',
     tools: ['Python', 'Flask', 'ReportLab', 'SQLite', 'Google Cloud VM'],
     overview: [
-      'Preventive maintenance is scheduled, executed and closed on paper before it becomes a Maximo record. Digital PPM was built to capture the checklist at the point of work and generate the PDF record from that data instead of from a scanned form.',
+      'Technicians recorded preventive maintenance checks on paper. Digital PPM captures their responses against a work-order reference and generates the PDF from the submission.',
     ],
     problem: [
-      'A PPM visit ends with a handwritten checklist. It is signed on site, collected, scanned, filed and then re-keyed into the work order. Each step adds delay between the technician finishing and the work order closing.',
-      'The paper copy is also the only evidence. If the scan is poor or the sheet is lost, the record of the work is weaker than the work itself.',
+      'With the paper workflow, the team collected and scanned signed checklists after visits. Preparing that evidence added a step before closeout.',
+      'A missing sheet or an unreadable scan made it harder to check individual responses during review.',
     ],
     contribution: [
       'Built the application in Python and Flask, deployed on a Google Cloud virtual machine.',
@@ -328,19 +328,12 @@ export const experience: Employer[] = [
         summary:
           'Reporting, SLA monitoring and maintenance data administration for a live mall operation on IBM Maximo MAS 8.',
         points: [
-          'Managed and monitored service requests and work orders in IBM Maximo MAS 8.',
-          'Tracked the SR and WO lifecycle: statuses, assignments and closeouts.',
-          'Monitored resolution SLAs.',
-          'Supported PPM scheduling and completion monitoring.',
-          'Worked with job plans, workgroups and maintenance records.',
-          'Monitored backlog volumes and ageing.',
-          'Prepared daily operational reports and performance summaries.',
-          'Supported PRS, KPI, SLA, OPM, QA, SPIA audit and NCR reporting.',
-          'Prepared Top 10 failures and critical asset downtime reporting.',
-          'Used Maximo WHERE clauses to retrieve the relevant operational records.',
-          'Built Excel reporting tools and Power BI reporting views.',
-          'Used Power Automate Desktop for repetitive Maximo workflows.',
-          'Supported data validation and consistency across reporting sources.',
+          'Tracked service requests and work orders in Maximo from assignment through closeout.',
+          'Supported preventive maintenance scheduling and checked completion against job plans.',
+          'Monitored resolution deadlines, overdue work and backlog age by workgroup.',
+          'Prepared reports on recurring failures and asset downtime for performance reviews, quality audits and nonconformance tracking.',
+          'Queried Maximo and validated records across Excel and Power BI reports.',
+          'Automated repetitive Maximo steps with Power Automate Desktop.',
         ],
         recognition: 'Certificate of Appreciation, Ejadah — August 2025',
       },

@@ -19,11 +19,12 @@ export function About() {
 
       <Reveal className="mt-10 flex max-w-3xl flex-col gap-4 text-pretty text-[19px] leading-relaxed sm:text-[23px]">
         <p>
-          I am a CAFM Planner at Dubai Hills Mall, working with IBM Maximo, operational reporting and performance data. I build Excel and Power BI views that help teams see what needs attention.
+          I work in computer-aided facilities management (CAFM) at Dubai Hills Mall. As a planner, I use IBM Maximo to track maintenance work and report on performance. I build Excel and Power BI views that help teams see what needs attention.
         </p>
         <p className="text-[16px] text-muted sm:text-[18px]">
           Before that, I worked in data processing at NielsenIQ, where accuracy, quality checks and timely client delivery shaped my approach.
         </p>
+        <a className="w-fit text-base underline" href={`mailto:${site.email}?subject=CV%20request`}>Request my CV</a>
       </Reveal>
 
       <div className="mt-14 grid gap-14 lg:grid-cols-[300px_1fr] lg:gap-24">

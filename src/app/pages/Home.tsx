@@ -59,6 +59,7 @@ export function Home() {
                   Contact me
                   <ArrowUpRight className="size-4" />
                 </Link>
+                <a className="inline-flex min-h-11 items-center px-2 text-sm underline" href={`mailto:${site.email}?subject=CV%20request`}>Request my CV</a>
               </div>
               <p className="mt-7 max-w-xl text-pretty text-[15.5px] leading-relaxed text-muted sm:text-[16.5px]">{site.intro}</p>
             </div>

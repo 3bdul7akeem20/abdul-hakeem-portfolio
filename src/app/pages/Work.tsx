@@ -6,6 +6,7 @@ import { bySlug, projects, type Project } from '../../data/site'
 import { Lines, Reveal } from '../components/motion'
 import { cx } from '../lib/cx'
 import { NotFound } from './NotFound'
+import { WorkExample } from '../components/WorkExample'
 
 export function Work() {
   const { slug } = useParams()
@@ -83,6 +84,8 @@ export function Work() {
             ))}
           </div>
         </Section>}
+
+        {project.kind !== 'account' && <Section title="Worked example"><WorkExample slug={project.slug} /></Section>}
 
         <Section title={project.kind === 'account' ? 'Responsibilities' : 'My contribution'}>
           <ul className="grid max-w-3xl gap-x-10 gap-y-3 sm:grid-cols-2">
